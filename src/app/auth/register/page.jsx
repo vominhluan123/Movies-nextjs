@@ -101,11 +101,15 @@ const Register = () => {
   };
   return (
     <>
-      <div className="lg:w-[800px] container mx-auto px-10 min-h-screen w-[500px]">
+      <div className="container min-h-screen px-10">
         <h1 className="py-20 text-3xl font-bold text-center title">
           Create your account
         </h1>
-        <form onSubmit={handleSubmit(handlerRegister)} autoComplete="off">
+        <form
+          onSubmit={handleSubmit(handlerRegister)}
+          autoComplete="off"
+          className="w-full"
+        >
           <Field>
             <Lable htmlFor="fullname">FullName</Lable>
             <Input

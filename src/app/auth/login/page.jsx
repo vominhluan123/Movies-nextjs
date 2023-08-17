@@ -66,7 +66,7 @@ const Login = () => {
 
   return (
     <>
-      <div className="lg:w-[800px] container px-10 min-h-screen w-[500px] mx-auto">
+      <div className="container min-h-screen px-10">
         <h1 className="py-20 text-3xl font-bold text-center title">Login</h1>
         <form onSubmit={handleSubmit(handlerLogin)} autoComplete="off">
           <Field>

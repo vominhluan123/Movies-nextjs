@@ -8,9 +8,7 @@ import { fetcher } from "../hook/fetcher";
 import ReactPaginate from "react-paginate";
 
 const itemsPerPage = 20;
-export const metadata = {
-  title: "Movies Page",
-};
+
 const Movies = ({ type = "upcoming" }) => {
   React.useEffect(() => {
     window.scrollTo({
@@ -61,7 +59,6 @@ const Movies = ({ type = "upcoming" }) => {
   // }, [data, filterDebounce]);
   return (
     <>
-      <title>{metadata.title}</title>
       <section className="px-10 container min-h-screen">
         <div className="flex mb-10">
           <div className="flex-1 input">

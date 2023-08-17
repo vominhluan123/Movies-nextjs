@@ -11,12 +11,10 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { toast } from "react-toastify";
-import { AuthErrorCodes, signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "@/firebase/firebaseConfig";
 import Link from "next/link";
-export const metadata = {
-  title: "Login Page",
-};
+
 const schema = yup.object({
   email: yup
     .string()
@@ -68,7 +66,6 @@ const Login = () => {
 
   return (
     <>
-      <title>{metadata.title}</title>
       <div className="lg:w-[800px] container px-10 min-h-screen w-[500px] mx-auto">
         <h1 className="py-20 text-3xl font-bold text-center title">Login</h1>
         <form onSubmit={handleSubmit(handlerLogin)} autoComplete="off">

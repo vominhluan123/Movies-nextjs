@@ -15,9 +15,7 @@ import { auth, db } from "@/firebase/firebaseConfig";
 import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-export const metadata = {
-  title: "Register Page",
-};
+
 const schema = yup.object({
   fullname: yup.string().required("Please enter your fullname"),
   email: yup
@@ -103,7 +101,6 @@ const Register = () => {
   };
   return (
     <>
-      <title>{metadata.title}</title>
       <div className="lg:w-[800px] container mx-auto px-10 min-h-screen w-[500px]">
         <h1 className="py-20 text-3xl font-bold text-center title">
           Create your account

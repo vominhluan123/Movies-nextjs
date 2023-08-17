@@ -3,18 +3,19 @@ import React from "react";
 import { createContext, useState } from "react";
 export const ThemeContext = createContext();
 export const Themeprovider = ({ children }) => {
-  const [darkMode, setDarkMode] = useState(() => {
-    const storedMode = localStorage.getItem("theme");
+  const [mode, setMode] = useState(() => {
+    const storedMode =
+      typeof window !== "undefined" ? localStorage.getItem("theme") : "light";
     return storedMode ? storedMode : "light";
   });
   const toogle = () => {
-    const newMode = darkMode === "light" ? "dark" : "light";
-    setDarkMode(newMode);
+    const newMode = mode === "light" ? "dark" : "light";
+    setMode(newMode);
     localStorage.setItem("theme", newMode);
   };
   return (
-    <ThemeContext.Provider value={{ toogle, darkMode }}>
-      <div className={`theme ${darkMode}`}>{children}</div>
+    <ThemeContext.Provider value={{ toogle, mode }}>
+      <div className={`theme ${mode}`}>{children}</div>
     </ThemeContext.Provider>
   );
 };

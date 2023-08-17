@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.light {
+  .nav {
+    @apply bg-primarylight text-textlight;
+  }
+  @apply bg-primarylight text-textlight;
+  .button {
+    @apply bg-btlight text-textlight;
+  }
+  .input {
+    @apply bg-primarylightcard text-textlight;
+  }
+  .card-movie {
+    @apply bg-primarylightcard;
+  }
+  .toogle {
+    @apply bg-tooglelight;
+  }
+  .active {
+    @apply text-active;
+  }
+  .title {
+    @apply text-textlight;
+  }
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 20px;
+    .selected {
+      @apply text-active;
+    }
+  }
+}
+.theme {
+  transition: 1s all ease;
+}
+.dark {
+  @apply bg-primarydark text-textdark;
+
+  .nav {
+    @apply bg-primarydark text-textdark;
+  }
+  .button {
+    @apply bg-btdark text-textdark;
+  }
+
+  .input {
+    @apply bg-primarydarkcard text-textdark;
+  }
+  .card-movie {
+    @apply bg-primarydarkcard;
+  }
+
+  .toogle {
+    @apply bg-toogledark;
+  }
+  .active {
+    @apply text-active;
+  }
+  .title {
+    @apply text-textdark;
+  }
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 20px;
+    .selected {
+      @apply text-active;
+    }
+  }
+}
+@layer components {
+  .container {
+    @apply mx-auto;
+    max-width: 1280px;
+  }
+  .movie-list .swiper-slide {
+    width: 300px;
+    position: relative;
+    height: auto;
+  }
+}
+.skeleton-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.skeleton-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e2e2e2; /* Màu nền của skeleton loading */
+  animation: skeleton-loading 1s infinite ease-in-out;
+}
+@keyframes skeleton-loading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 20px;
+  .selected {
+    @apply text-textdark;
+  }
+}

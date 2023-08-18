@@ -7,7 +7,7 @@ const DarkModeToogle = () => {
 
   return (
     <div
-      className="flex relative w-[60px] h-[24px] border rounded-3xl border-[#53c28b70] items-center cursor-pointer px-2 justify-between border-secondary"
+      className="flex relative w-[60px] h-[20px] border rounded-3xl border-[#53c28b70] items-center cursor-pointer p-2 justify-between border-secondary"
       onClick={toogle}
     >
       <div className="text-xs">🌙</div>

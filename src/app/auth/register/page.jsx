@@ -108,7 +108,7 @@ const Register = () => {
         <form
           onSubmit={handleSubmit(handlerRegister)}
           autoComplete="off"
-          className="w-full"
+          className="w-[300px] mx-auto md:w-[500px]"
         >
           <Field>
             <Lable htmlFor="fullname">FullName</Lable>

@@ -32,11 +32,11 @@ const Navbar = () => {
   return (
     <>
       <nav className="sticky top-0 left-0 w-full text-primary flex justify-between items-center z-[100] px-10 h-5 py-10 backdrop-blur-3xl">
-        <span>
+        <div>
           <Link href="/">
             <div className="relative text-2xl font-bold">Movies</div>
           </Link>
-        </span>
+        </div>
         <div className="relative flex items-center gap-5 font-bold text-1xl">
           <DarkModeToogle />
           {links.map((link) => (
@@ -72,7 +72,7 @@ const Navbar = () => {
               {open && (
                 <button
                   onClick={handleSignOut}
-                  className="absolute top-7 outline-none right-0 bg-slate-400 w-20 rounded-lg"
+                  className="absolute right-0 w-20 rounded-lg outline-none top-7 bg-slate-400"
                 >
                   Logout
                 </button>

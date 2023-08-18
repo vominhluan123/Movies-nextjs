@@ -94,7 +94,7 @@ const MoviesDetail = ({ params }) => {
           {movie?.overview}
         </p>
         <h2 className="title text-center text-3xl mb-10">Casts</h2>
-        <div className="grid grid-cols-4 px-10 gap-5 mb-10">
+        <div className="grid md:grid-cols-4 grid-cols-2  gap-5 mb-10">
           {cast?.slice(0, 4).map((item) => (
             <div key={item.id} className="card-item title h-[500px] ">
               <div className="cast-image relative h-full mb-3">
@@ -112,13 +112,13 @@ const MoviesDetail = ({ params }) => {
           ))}
         </div>
         <div className="py-10">
-          <div className="flex flex-col px-10 gap-5">
+          <div className="flex flex-col gap-5">
             {trailer?.results.slice(0, 2).map((item) => (
               <div key={item.id}>
                 <h3 className="text-xl font-medium title mb-5 card-movie p-3 inline-block">
                   {item.name}
                 </h3>
-                <div className="w-full aspect-video">
+                <div className="md:w-full aspect-video w-[400px]">
                   <iframe
                     className="w-full h-full object-fill"
                     width="1271"
@@ -135,10 +135,10 @@ const MoviesDetail = ({ params }) => {
           </div>
         </div>
         <div className="py-10">
-          <h2 className="capitalize text-3xl mb-10 title font-medium px-10">
+          <h2 className="capitalize text-3xl mb-10 title font-medium">
             similar movies
           </h2>
-          <div className="movie-list px-10">
+          <div className="movie-list">
             <Swiper
               modules={[Autoplay]}
               grabCursor={true}

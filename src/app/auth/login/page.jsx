@@ -68,7 +68,11 @@ const Login = () => {
     <>
       <div className="container min-h-screen px-10">
         <h1 className="py-20 text-3xl font-bold text-center title">Login</h1>
-        <form onSubmit={handleSubmit(handlerLogin)} autoComplete="off">
+        <form
+          onSubmit={handleSubmit(handlerLogin)}
+          autoComplete="off"
+          className="w-[300px] mx-auto md:w-[500px]"
+        >
           <Field>
             <Lable htmlFor="email">Email</Lable>
             <Input

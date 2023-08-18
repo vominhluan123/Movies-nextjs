@@ -118,7 +118,7 @@ const MoviesDetail = ({ params }) => {
                 <h3 className="text-xl font-medium title mb-5 card-movie p-3 inline-block">
                   {item.name}
                 </h3>
-                <div className="md:w-full aspect-video w-[400px]">
+                <div className="md:w-full aspect-video w-[300px]">
                   <iframe
                     className="w-full h-full object-fill"
                     width="1271"
